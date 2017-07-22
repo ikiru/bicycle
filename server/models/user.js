@@ -25,11 +25,12 @@ let UserSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+//Password hash and encypting
 UserSchema.pre("save", function(next) {
   this.password = bcrypt.hashSync(this.password, bcrypt.genSaltSync(10));
   next();
 });
-
+// Compare Passwords returns boolean
 UserSchema.methods.authenticate = function(password) {
   return bcrypt.compareSync(password, this.password);
 };
