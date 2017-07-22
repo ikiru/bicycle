@@ -11,9 +11,12 @@ app.use(
     cookie: {}
   })
 );
+
+app.use(bp.json());
 // app.use(express.static(__dirname + '/public/dist'))
 
 require("./server/config/mongoose");
+require("./server/config/route")(app);
 
 app.listen(8000, function() {
   console.log("listening on port 8000 . . .");
