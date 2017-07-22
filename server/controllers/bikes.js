@@ -1,5 +1,5 @@
 let mongoose = require("mongoose");
-let Bike = mongoose.model("bikes");
+let Bike = mongoose.model("bike");
 
 module.exports = {
   // index to test with postman

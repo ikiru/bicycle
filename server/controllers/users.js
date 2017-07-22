@@ -2,7 +2,7 @@ let mongoose = require("mongoose");
 let User = mongoose.model("User");
 
 module.exports = {
-  // Setting the session variable => controller
+  // Setting the session variable
   session: function(req, res) {
     if (req.session.user_id) {
       return res.json({
