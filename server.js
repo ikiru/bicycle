@@ -13,7 +13,7 @@ app.use(
 );
 
 app.use(bp.json());
-// app.use(express.static(__dirname + '/public/dist'))
+app.use(express.static(__dirname + "/public/dist"));
 
 require("./server/config/mongoose");
 require("./server/config/route")(app);

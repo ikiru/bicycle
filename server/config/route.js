@@ -18,4 +18,9 @@ module.exports = function(app) {
   app.post("/bike", Bikes.create);
   app.patch("/bike/:id", Bikes.update);
   app.delete("/bike/:id", Bikes.destroy);
+
+  // Path to the Angular Routing
+  app.all("*", function(req, res, next) {
+    res.sendFile(path.resolve("./public/dist/index.html"));
+  });
 };
