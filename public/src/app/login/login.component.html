@@ -1,0 +1,37 @@
+<div>
+  <h3>login</h3>
+  <form>
+    <div>
+      <label>Email</label>
+      <input type="text" name="email" [(ngModel)]="loginUser.email">
+    </div>
+    <div>
+      <label>Password</label>
+      <input type="text" name="password" [(ngModel)]="loginUser.password">
+    </div>
+    <input type="submit" value="Login">
+  </form>
+</div>
+
+<div>
+<h3>Registration</h3>
+<form>
+<div>
+  <label>Name</label>
+  <input type="text" name="name" [(ngModel)]="newUser.name">
+</div>
+<div>
+  <label>Email</label>
+  <input type="text" name="email" [(ngModel)]="newUser.email">
+</div>
+<div>
+  <label>Password</label>
+  <input type="password" name="password" [(ngModel)]="newUser.password">
+</div>
+<div>
+  <label>Confirm password</label>
+  <input type="password" name="password_confirmation" [(ngModel)]="newUser.password_confirmation">
+</div>
+<input type="submit" value="Register">
+</form>
+</div>
