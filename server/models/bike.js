@@ -1,5 +1,4 @@
 let mongoose = require("mongoose");
-
 let BikeSchema = new mongoose.Schema(
   {
     title: {

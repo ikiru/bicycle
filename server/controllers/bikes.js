@@ -1,10 +1,10 @@
 let mongoose = require("mongoose");
-let Bike = mongoose.model("bike");
+let Bike = mongoose.model("Bike");
 
 module.exports = {
   // index to test with postman
   index: function(req, res) {
-    Bike.find({}, function(err, bikes) {
+    bike.find({}, function(err, bikes) {
       if (err) {
         return res.json(err);
       }
