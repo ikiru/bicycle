@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 import { UserService } from "../user.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-login",
@@ -13,7 +14,7 @@ export class LoginComponent implements OnInit {
   registrationErrors = [];
   loginErrors = [];
 
-  constructor(private _userService: UserService) {}
+  constructor(private _userService: UserService, private _router: Router) {}
 
   propagateUser(newUser) {
     this.createUserEvent.emit(newUser);
@@ -32,6 +33,7 @@ export class LoginComponent implements OnInit {
           }
         } else {
           this.propagateUser(data);
+          this._router.navigateByUrl("/dashboard");
         }
       })
       .catch(err => {

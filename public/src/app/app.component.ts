@@ -15,20 +15,4 @@ export class AppComponent {
   propagateUser(user) {
     this.current_user = user;
   }
-  createUser(newUser) {
-    console.log("in app component");
-    console.log(newUser);
-    return this._userService
-      .create(newUser)
-      .then(user => {
-        console.log(user);
-        if (user.errors) {
-        } else {
-          this.propagateUser(user);
-        }
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  }
 }
