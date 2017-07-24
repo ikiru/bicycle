@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   constructor() {}
 
   createUser(newUser) {
-    this.createUserEvent.emit();
+    this.createUserEvent.emit(newUser);
   }
 
   ngOnInit() {}
